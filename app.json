@@ -1,0 +1,73 @@
+{
+  "expo": {
+    "name": "DesiHire - AIML-04 Cross Platform",
+    "slug": "desihire-aiml04",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": "desihire",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.desihire.aiml04",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "DesiHire requires microphone access for voice-guided skill assessments and rural worker profile voice inputs.",
+        "NSSpeechRecognitionUsageDescription": "DesiHire uses speech recognition to convert spoken vernacular commands into job search filters and skill tags.",
+        "NSFaceIDUsageDescription": "DesiHire uses Face ID to securely authenticate rural workers and protect stored profile data.",
+        "UIBackgroundModes": [
+          "audio"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.desihire.aiml04",
+      "permissions": [
+        "RECORD_AUDIO",
+        "ACCESS_NETWORK_STATE",
+        "INTERNET",
+        "MODIFY_AUDIO_SETTINGS",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/favicon.png",
+      "pwa": {
+        "name": "DesiHire AIML-04",
+        "shortName": "DesiHire",
+        "startUrl": "/",
+        "display": "standalone",
+        "backgroundColor": "#ffffff",
+        "themeColor": "#000000"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow DesiHire to record audio for voice skill verification."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

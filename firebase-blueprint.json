@@ -1,0 +1,52 @@
+{
+  "entities": {
+    "Profile": {
+      "title": "Job Seeker Profile",
+      "description": "User profile containing skills, contact information, and job preferences",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "fullName": { "type": "string" },
+        "phone": { "type": "string" },
+        "district": { "type": "string" },
+        "villageOrTown": { "type": "string" },
+        "skills": { "type": "string" },
+        "experienceLevel": { "type": "string" },
+        "yearsOfExperience": { "type": "number" },
+        "minExpectedPayPerDay": { "type": "number" },
+        "educationLevel": { "type": "string" },
+        "hasOwnVehicle": { "type": "boolean" },
+        "bio": { "type": "string" },
+        "lastUpdated": { "type": "string" }
+      },
+      "required": ["fullName", "phone"]
+    },
+    "Application": {
+      "title": "Job Application",
+      "description": "Application submitted by a job seeker for a job posting",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "jobId": { "type": "string" },
+        "jobTitle": { "type": "string" },
+        "employerName": { "type": "string" },
+        "seekerId": { "type": "string" },
+        "seekerName": { "type": "string" },
+        "seekerPhone": { "type": "string" },
+        "appliedAt": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["jobId", "seekerPhone", "appliedAt"]
+    }
+  },
+  "firestore": {
+    "/profiles/{phoneKey}": {
+      "schema": "Profile",
+      "description": "User account profiles indexed by phone key"
+    },
+    "/applications/{appId}": {
+      "schema": "Application",
+      "description": "Job application records"
+    }
+  }
+}
