@@ -1,6 +1,6 @@
-# LocalSkill Match - AI Local Employment
+# DesiHire - AI Local Employment
 
-LocalSkill Match is an offline-first React + TypeScript web app for connecting local job seekers with community employment opportunities.
+DesiHire is an offline-first React + TypeScript web app for connecting local job seekers with community employment opportunities.
 
 The skill-matching engine runs locally in the browser using deterministic text and skill-similarity logic.
 
